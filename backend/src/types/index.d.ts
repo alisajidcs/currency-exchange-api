@@ -1,5 +1,6 @@
 // got this list from the response of latest currency api
 export type Currency =
+  | "EUR"
   | "AUD"
   | "BGN"
   | "BRL"

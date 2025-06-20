@@ -20,7 +20,9 @@
   "homepage": "https://github.com/alisajidcs/currency-exchange-api#readme",
   "description": "",
   "dependencies": {
+    "@types/cors": "^2.8.19",
     "axios": "^1.10.0",
+    "cors": "^2.8.5",
     "express": "^5.1.0"
   },
   "devDependencies": {

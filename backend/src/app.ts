@@ -1,10 +1,17 @@
 import express from "express";
 import exchangeRoutes from "./routes/exchangeRoutes";
 import { errorResponse } from "./utils/handlers";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.json());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
 
 // API routes
 app.use("/api", exchangeRoutes);

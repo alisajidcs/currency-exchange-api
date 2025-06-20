@@ -1,10 +1,14 @@
 import { Router } from "express";
+import {
+  getLatestRates,
+  convertCurrency,
+  getHistoricalRates,
+} from "../controllers/exchangeController";
 
 const router = Router();
 
-// routes will go here
-router.get("/", (req, res) => {
-  res.json({ data: "working" });
-});
+router.get("/latest/:base", getLatestRates);
+router.post("/convert", convertCurrency);
+router.get("/history", getHistoricalRates);
 
 export default router;

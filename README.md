@@ -5,10 +5,31 @@ A modern fullstack currency exchange application with a Node.js/Express backend 
 ---
 
 ## Features
+
 - Get latest currency exchange rates
 - Convert between currencies
 - View historical rates with pagination
 - Modern, accessible UI with [shadcn/ui](https://ui.shadcn.com/)
+
+---
+
+## Screenshots
+
+### Full Dashboard
+
+![Full Dashboard](screenshots/fullPage.png)
+
+### Latest Rates API
+
+![Latest Rates](screenshots/latestRateApi.png)
+
+### Convert Currency API
+
+![Convert Currency](screenshots/convertCurrencyApi.png)
+
+### Historical Rates API
+
+![Historical Rates](screenshots/historicalRatesApi.png)
 
 ---
 
@@ -30,11 +51,13 @@ A modern fullstack currency exchange application with a Node.js/Express backend 
    npm install
    ```
 2. **Start the backend server:**
+
    ```sh
    npm run dev
    # or
    npm start
    ```
+
    By default, the backend runs on **http://localhost:3001**
 
 3. **CORS:**
@@ -51,13 +74,16 @@ A modern fullstack currency exchange application with a Node.js/Express backend 
    npm install
    ```
 2. **shadcn/ui setup:**
+
    - Already initialized and components added (Button, Card, Input, Select, Label).
    - You can add more components as needed with `npx shadcn-ui@latest add <component>`.
 
 3. **Start the frontend app:**
+
    ```sh
    npm run dev
    ```
+
    By default, the frontend runs on **http://localhost:3000**
 
 4. **API Base URL:**
@@ -67,6 +93,7 @@ A modern fullstack currency exchange application with a Node.js/Express backend 
 ---
 
 ## Usage
+
 - Visit [http://localhost:3000](http://localhost:3000) in your browser.
 - Use the dashboard to:
   - View latest rates for any currency
@@ -76,6 +103,7 @@ A modern fullstack currency exchange application with a Node.js/Express backend 
 ---
 
 ## Development Notes
+
 - **TypeScript** is used throughout for type safety.
 - **shadcn/ui** provides modern, accessible UI components.
 - **CORS** is enabled in the backend for local development.
@@ -87,6 +115,7 @@ A modern fullstack currency exchange application with a Node.js/Express backend 
 ---
 
 ## Customization
+
 - Add more shadcn/ui components for richer UI.
 - Adjust CORS or API base URLs as needed for deployment.
 - Extend backend or frontend features as desired!
@@ -94,4 +123,5 @@ A modern fullstack currency exchange application with a Node.js/Express backend 
 ---
 
 ## License
-MIT 
+
+MIT

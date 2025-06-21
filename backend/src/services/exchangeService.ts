@@ -1,5 +1,5 @@
 import axios from "axios";
-import { EXCLUDED_CURRENCIES, FRANKFURTER_BASE_URL } from "../utils/constants";
+import { FRANKFURTER_BASE_URL } from "../utils/constants";
 import { Currency } from "../types";
 import { getErrorMessage } from "../utils/error";
 
@@ -19,11 +19,6 @@ export async function convertCurrency(
   from: Currency,
   to: Currency
 ) {
-  if ([from, to].some((cur) => EXCLUDED_CURRENCIES.includes(cur))) {
-    throw new Error(
-      `Conversions involving ${EXCLUDED_CURRENCIES.join(", ")} are not allowed.`
-    );
-  }
   try {
     const { data } = await axios.get(`${FRANKFURTER_BASE_URL}/latest`, {
       params: { amount, from, to },

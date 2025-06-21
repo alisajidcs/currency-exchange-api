@@ -13,39 +13,7 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-
-const currencies: Currency[] = [
-  "AUD",
-  "BGN",
-  "BRL",
-  "CAD",
-  "CHF",
-  "CNY",
-  "CZK",
-  "DKK",
-  "GBP",
-  "HKD",
-  "HUF",
-  "IDR",
-  "ILS",
-  "INR",
-  "ISK",
-  "JPY",
-  "KRW",
-  "MXN",
-  "MYR",
-  "NOK",
-  "NZD",
-  "PHP",
-  "PLN",
-  "RON",
-  "SEK",
-  "SGD",
-  "THB",
-  "TRY",
-  "USD",
-  "ZAR",
-];
+import { CURRENCY_LIST } from "../lib/utils";
 
 export default function ConvertCurrency() {
   const [amount, setAmount] = useState(1);
@@ -95,7 +63,7 @@ export default function ConvertCurrency() {
                 <SelectValue placeholder="From" />
               </SelectTrigger>
               <SelectContent>
-                {currencies.map((c) => (
+                {CURRENCY_LIST.map((c) => (
                   <SelectItem key={c} value={c}>
                     {c}
                   </SelectItem>
@@ -110,7 +78,7 @@ export default function ConvertCurrency() {
                 <SelectValue placeholder="To" />
               </SelectTrigger>
               <SelectContent>
-                {currencies.map((c) => (
+                {CURRENCY_LIST.map((c) => (
                   <SelectItem key={c} value={c}>
                     {c}
                   </SelectItem>

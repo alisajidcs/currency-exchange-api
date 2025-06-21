@@ -12,39 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
-
-const currencies: Currency[] = [
-  "AUD",
-  "BGN",
-  "BRL",
-  "CAD",
-  "CHF",
-  "CNY",
-  "CZK",
-  "DKK",
-  "GBP",
-  "HKD",
-  "HUF",
-  "IDR",
-  "ILS",
-  "INR",
-  "ISK",
-  "JPY",
-  "KRW",
-  "MXN",
-  "MYR",
-  "NOK",
-  "NZD",
-  "PHP",
-  "PLN",
-  "RON",
-  "SEK",
-  "SGD",
-  "THB",
-  "TRY",
-  "USD",
-  "ZAR",
-];
+import { CURRENCY_LIST } from "../lib/utils";
 
 export default function LatestRates() {
   const [base, setBase] = useState<Currency>("USD");
@@ -81,7 +49,7 @@ export default function LatestRates() {
                 <SelectValue placeholder="Select currency" />
               </SelectTrigger>
               <SelectContent>
-                {currencies.map((c) => (
+                {CURRENCY_LIST.map((c) => (
                   <SelectItem key={c} value={c}>
                     {c}
                   </SelectItem>
